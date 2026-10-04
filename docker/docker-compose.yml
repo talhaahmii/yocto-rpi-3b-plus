@@ -1,0 +1,22 @@
+services:
+  yocto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+
+    container_name: yocto-rpi3bplus
+
+    working_dir: /workspace
+
+    volumes:
+      - ..:/workspace
+
+    stdin_open: true
+    tty: true
+
+    environment:
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8

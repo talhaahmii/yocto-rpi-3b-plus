@@ -1,0 +1,21 @@
+# Yocto build output
+build/
+
+# bitbake-setup generated build/download/cache data
+bitbake-builds/
+
+# Python virtual environment
+bitbake-setup-venv/
+
+# Downloads and shared build cache
+downloads/
+sstate-cache/
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+sources/
